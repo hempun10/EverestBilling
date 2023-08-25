@@ -1,8 +1,10 @@
 import Container from "@/components/shared/Container";
+import FeatureCard from "@/components/shared/FeatureCard";
 import HeadTextWrapper from "@/components/shared/HeadTextWrapper";
 import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
 import React from "react";
+import Mission from "./components/Mission";
 
 const AboutPage = () => {
   return (
@@ -38,6 +40,18 @@ const AboutPage = () => {
           </Wrapper>
         </Container>
       </div>
+      <Container>
+        <Wrapper>
+          <FeatureCard
+            heading="Our Story"
+            desc="A crew of engineers, chartered accountants, lawyers and management experts walked into a bar...and the rest is history."
+            imgUrl="/assets/about-2.png"
+            imgContainerClassName=""
+            textContainerClassName=" text-left"
+          />
+          <Mission />
+        </Wrapper>
+      </Container>
     </>
   );
 };
