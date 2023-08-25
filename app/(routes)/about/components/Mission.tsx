@@ -1,5 +1,8 @@
 import HeadTextWrapper from "@/components/shared/HeadTextWrapper";
 import React from "react";
+import { missionData } from "@/constants/constants";
+import FeatureCard from "@/components/shared/FeatureCard";
+import CTA from "@/components/cta/CTA";
 
 const Mission = () => {
   return (
@@ -22,6 +25,17 @@ const Mission = () => {
           ownership to make commerce better for everyone.
         </p>
       </HeadTextWrapper>
+      {missionData.map((item, i) => (
+        <FeatureCard
+          key={i}
+          heading={item.heading}
+          header={item.header}
+          desc={item.desc}
+          imgUrl={item.imgUrl}
+          imgContainerClassName=""
+          textContainerClassName=" text-left"
+        />
+      ))}
     </div>
   );
 };

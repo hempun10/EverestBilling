@@ -5,6 +5,7 @@ import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
 import React from "react";
 import Mission from "./components/Mission";
+import CTA from "@/components/cta/CTA";
 
 const AboutPage = () => {
   return (
@@ -52,6 +53,7 @@ const AboutPage = () => {
           <Mission />
         </Wrapper>
       </Container>
+      <CTA />
     </>
   );
 };

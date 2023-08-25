@@ -8,6 +8,7 @@ interface Props {
   heading: string;
   desc: string;
   imgUrl: string;
+  header?: string;
 }
 
 const FeatureCard = ({
@@ -16,6 +17,7 @@ const FeatureCard = ({
   heading,
   desc,
   imgUrl,
+  header,
 }: Props) => {
   return (
     <section className=" mt-12 flex gap-[4rem] items-center flex-col sm:flex-row ">
@@ -25,10 +27,15 @@ const FeatureCard = ({
           textContainerClassName
         )}
       >
+        <p className="px-0 mb-0 md:mb-4 text-lg text-primary font-[500] uppercase md:text-xl ">
+          {" "}
+          {header}
+        </p>
         <h1 className="mb-5 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-4xl md:tracking-tight">
           {" "}
           {heading}
         </h1>
+
         <p className="px-0 mb-0 md:mb-8 text-lg text-gray-600 md:text-xl ">
           {" "}
           {desc}

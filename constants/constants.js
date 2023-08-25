@@ -241,3 +241,23 @@ export const cutomWrapperSectionData = [
     },
 
 ]
+
+
+export const missionData = [
+    {
+        header: 'OUR TEAM AND OUR SOCIAL IMPACT ',
+        heading: 'Creating a community for impact',
+        desc: ' With millions of businesses powered by EBS, we invest in our people and our communities. Our Social Impact initiatives focus on enabling an equitable future by building products and programs to support our team and merchants.',
+        imgUrl: '/assets/about-3.png',
+        textContainerClassName: 'order-2 ',
+        imgContainerClassName: 'order-1 '
+    },
+    {
+        header: 'Let\'s empower every business',
+        heading: 'Empowering the businesses',
+        desc: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas fugit delectus aliquam dicta voluptates vel nostrum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cum dicta cupiditate perspiciatis fuga!',
+        imgUrl: '/assets/benefit.png',
+        textContainerClassName: 'order-2 ',
+        imgContainerClassName: 'order-1'
+    },
+]
