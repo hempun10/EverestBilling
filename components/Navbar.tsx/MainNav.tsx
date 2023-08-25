@@ -27,11 +27,6 @@ const MainNav = () => {
       isActive: pathname === "/resources",
     },
     {
-      href: "/partners",
-      label: "Partners",
-      isActive: pathname === "/partners",
-    },
-    {
       href: "/about",
       label: "About",
       isActive: pathname === "/about",
