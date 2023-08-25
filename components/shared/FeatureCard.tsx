@@ -18,10 +18,10 @@ const FeatureCard = ({
   imgUrl,
 }: Props) => {
   return (
-    <section className=" mt-12 flex gap-10 items-center flex-col sm:flex-row ">
+    <section className=" mt-12 flex gap-[4rem] items-center flex-col sm:flex-row ">
       <div
         className={cn(
-          "text_content  sm:w-1/2 text-left ",
+          "text_content  sm:w-1/2 text-right",
           textContainerClassName
         )}
       >
@@ -38,7 +38,7 @@ const FeatureCard = ({
         className={cn("w-full text-center md:w-1/2  ", imgContainerClassName)}
       >
         <div className="relative z-0 w-full mt-8">
-          <div className="relative overflow-hidden  shadow-2xl lg:w-[550px] m-auto ">
+          <div className="relative overflow-hidden  shadow-2xl lg:w-[500px] m-auto ">
             <div className="flex items-center flex-none px-4 bg-primary rounded-b-none h-7 rounded-xl">
               <div className="flex space-x-1.5">
                 <div className="w-3 h-3 border-2 border-white rounded-full"></div>

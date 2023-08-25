@@ -186,42 +186,58 @@ export const featureData = [
         heading: 'Manage your Stock',
         desc: 'Easily manage your products, stocks-in, stocks-out and many more.',
         imgUrl: '/assets/feature_stock_img.png',
-        textContainerClassName: 'order-1 text-right',
-        imgContainerClassName: 'order-2'
+        textContainerClassName: 'order-2 text-left',
+        imgContainerClassName: 'order-1'
     },
     {
         heading: 'Track your Purchase',
         desc: 'Keep tracks of your purchases and other business expendetures.',
         imgUrl: '/assets/feature_purchase_img.png',
-        textContainerClassName: 'order-2 ',
-        imgContainerClassName: 'order-1'
+        textContainerClassName: 'order-1  ',
+        imgContainerClassName: 'order-2  '
     },
     {
         heading: 'Maintain you Sales',
         desc: 'Maintain and keep track of your sales and other business incomes.',
         imgUrl: '/assets/feature_sales_img.png',
-        textContainerClassName: 'order-1 text-right',
-        imgContainerClassName: 'order-2'
+        textContainerClassName: 'order-2 text-left',
+        imgContainerClassName: 'order-1'
     },
     {
         heading: 'Add your Bills',
         desc: 'Add your purchaes bill or create and print your sales bill with wired or wireless printing facility.',
         imgUrl: '/assets/feature_bills.png',
-        textContainerClassName: 'order-2 ',
-        imgContainerClassName: 'order-1'
+        textContainerClassName: 'order-1   ',
+        imgContainerClassName: 'order-2   '
     },
     {
         heading: 'Generate your Report',
         desc: 'Generate you daily, weekly or monthly reports and compare other with other reports to calculate your growth',
         imgUrl: '/assets/feature_report.png',
-        textContainerClassName: 'order-1 text-right ',
-        imgContainerClassName: 'order-2 '
+        textContainerClassName: 'order-2 text-left',
+        imgContainerClassName: 'order-1'
     },
     {
         heading: 'Analyse your business',
         desc: 'Analyse your over all business, purchaes, sales, profit or loss to create a more compact business ideas.',
         imgUrl: '/assets/hero_img.png',
-        textContainerClassName: 'order-2 ',
-        imgContainerClassName: 'order-1'
+        textContainerClassName: 'order-1   ',
+        imgContainerClassName: 'order-2   '
     },
+]
+
+export const cutomWrapperSectionData = [
+    {
+        imgUrl: '/assets/resources_yt.png',
+        heading: 'Video Tutorials',
+        desc: 'Learn to use EBS through our videos tutorial',
+        link: '#'
+    },
+    {
+        imgUrl: '/assets/resources_docs.png',
+        heading: 'Blogs',
+        desc: 'Learn to use EBS through our extensive blog',
+        link: '/blog'
+    },
+
 ]
