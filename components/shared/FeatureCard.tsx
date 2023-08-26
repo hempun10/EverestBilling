@@ -12,6 +12,8 @@ interface Props {
   desc: string;
   imgUrl: string;
   header?: string;
+  index: number;
+  shouldUseVariants?: boolean;
 }
 
 const FeatureCard = ({
@@ -21,11 +23,19 @@ const FeatureCard = ({
   desc,
   imgUrl,
   header,
+  index,
+  shouldUseVariants = true,
 }: Props) => {
   return (
-    <section className=" mt-12 flex gap-[4rem] items-center flex-col sm:flex-row ">
-      <motion.div
-        variants={fadeIn("right", "tween", 0.2, 1)}
+    <motion.section
+      className=" mt-12 flex gap-[4rem] items-center flex-col sm:flex-row "
+      variants={
+        shouldUseVariants
+          ? fadeIn("up", "sween", index * 0.5, 1)
+          : fadeIn("up", "tween", 0.2, 1)
+      }
+    >
+      <div
         className={cn(
           "text_content  sm:w-1/2 text-right",
           textContainerClassName
@@ -44,9 +54,8 @@ const FeatureCard = ({
           {" "}
           {desc}
         </p>
-      </motion.div>
-      <motion.div
-        variants={fadeIn("left", "tween", 0.2, 1)}
+      </div>
+      <div
         className={cn("w-full text-center md:w-1/2  ", imgContainerClassName)}
       >
         <div className="relative z-0 w-full mt-8">
@@ -68,8 +77,8 @@ const FeatureCard = ({
             />
           </div>
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 };
 

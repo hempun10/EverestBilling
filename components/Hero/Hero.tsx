@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "../shared/Container";
-import NextImage from "next/image";
 import CustomBtn from "../shared/CustomBtn";
 import Wrapper from "../shared/Wrapper";
 import HeadTextWrapper from "../shared/HeadTextWrapper";

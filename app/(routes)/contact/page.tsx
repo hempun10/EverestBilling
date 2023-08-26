@@ -4,6 +4,7 @@ import Wrapper from "@/components/shared/Wrapper";
 import React from "react";
 import { From } from "./components/from";
 import CTA from "@/components/cta/CTA";
+import Heading from "@/components/shared/Heading";
 
 const ContactPage = () => {
   return (
@@ -11,13 +12,12 @@ const ContactPage = () => {
       <Container className={"mt-20"}>
         <Wrapper>
           <HeadTextWrapper>
-            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-              <span>Contact Us</span>
-            </h1>
-            <p className="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
-              We&apos;re available for any queries or support. Please send us a
-              message here.
-            </p>
+            <Heading
+              FrontHeadText="Contact Us"
+              spanText=""
+              descText="We're available for any queries or support. Please send us a
+              message here."
+            />
           </HeadTextWrapper>
           <From />
         </Wrapper>

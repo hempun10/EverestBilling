@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/shared/Container";
 import HeadTextWrapper from "@/components/shared/HeadTextWrapper";
 import Wrapper from "@/components/shared/Wrapper";
@@ -5,7 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { cutomWrapperSectionData } from "@/constants/constants";
-
+import Heading from "@/components/shared/Heading";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion";
 interface Props {
   imgUrl: string;
   heading: string;
@@ -40,19 +43,19 @@ const ResourcesPage = () => {
     <Container className={"mt-20"}>
       <Wrapper>
         <HeadTextWrapper>
-          <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-            <span>Learn How to use</span>{" "}
-            <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-purple-500 lg:inline">
-              EBS for your
-            </span>{" "}
-            <span>Business</span>
-          </h1>
-          <p className="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
-            Get the most efficient way to manage accounting & finance for modern
-            businesses
-          </p>
+          <Heading
+            TopSubHeadText="Explore the EBS"
+            FrontHeadText="Learn How to use"
+            spanText="EBS for your"
+            LastHeadText="Business"
+            descText="Get the most efficient way to manage accounting & finance for modern
+            businesses"
+          />
         </HeadTextWrapper>
-        <div className="custom_wrapper flex gap-10 flex-col sm:flex-row">
+        <motion.div
+          className="custom_wrapper flex gap-10 flex-col sm:flex-row"
+          variants={fadeIn("up", "tween", 0.3, 1)}
+        >
           {cutomWrapperSectionData.map((item, i) => (
             <CustomWrapperSection
               key={i}
@@ -62,7 +65,7 @@ const ResourcesPage = () => {
               link={item.link}
             />
           ))}
-        </div>
+        </motion.div>
       </Wrapper>
     </Container>
   );

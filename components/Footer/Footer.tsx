@@ -24,8 +24,8 @@ const MainFooter = () => {
             <Image
               src={"/assets/logo.png"}
               alt=" logo"
-              width={250}
-              height={250}
+              width={100}
+              height={100}
               priority
               className=" mb-8 mx-auto"
             />

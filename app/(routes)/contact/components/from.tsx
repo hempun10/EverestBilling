@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,6 +15,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -41,7 +42,10 @@ export function From() {
   }
 
   return (
-    <div className=" w-full lg:w-1/2   shadow-xl p-7 text-left m-auto rounded-lg">
+    <motion.div
+      className=" w-full lg:w-1/2   shadow-xl p-7 text-left m-auto rounded-lg"
+      variants={fadeIn("up", "tween", 0.2, 1)}
+    >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
@@ -101,6 +105,6 @@ export function From() {
           </Button>
         </form>
       </Form>
-    </div>
+    </motion.div>
   );
 }
