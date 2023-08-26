@@ -1,7 +1,6 @@
 import FeatureCard from "@/components/shared/FeatureCard";
 import React from "react";
 import { featureData } from "@/constants/constants";
-import CTA from "@/components/cta/CTA";
 
 const Features = () => {
   return (

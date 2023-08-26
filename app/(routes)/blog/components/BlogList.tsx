@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import urlFor from "@/lib/urlFor";
 import ClientSideRoute from "./ClientSideRoute";
 import type { Post } from "common-types";
 import { LucideArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion";
 
 type BlogListProps = {
   posts: Post[];
@@ -17,7 +20,10 @@ function BlogList({ posts }: BlogListProps) {
         {/* Posts */}
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-            <div className="group flex cursor-pointer flex-col">
+            <motion.div
+              className="group flex cursor-pointer flex-col"
+              variants={fadeIn("up", "tween", 0.3, 1)}
+            >
               <div className="relative h-80 w-full transform-gpu drop-shadow-xl transition-transform duration-200 ease-out group-hover:scale-105">
                 <Image
                   className="object-cover object-left lg:object-center"
@@ -62,7 +68,7 @@ function BlogList({ posts }: BlogListProps) {
                 Read Post
                 <LucideArrowUpRight className="ml-2 h-4 w-4"></LucideArrowUpRight>
               </p>
-            </div>
+            </motion.div>
           </ClientSideRoute>
         ))}
       </div>

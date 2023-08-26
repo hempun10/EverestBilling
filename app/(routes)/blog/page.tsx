@@ -6,7 +6,9 @@ import Blogs from "./components/Blogs";
 const BlogPage = () => {
   return (
     <Container>
-      <Blogs />
+      <Wrapper className="px-0">
+        <Blogs />
+      </Wrapper>
     </Container>
   );
 };

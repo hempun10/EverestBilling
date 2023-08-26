@@ -3,21 +3,18 @@ import Container from "../shared/Container";
 import PricingCard from "./PricingCard";
 import Wrapper from "../shared/Wrapper";
 import HeadTextWrapper from "../shared/HeadTextWrapper";
+import Heading from "../shared/Heading";
 
 const Pricing = () => {
   return (
     <Container className={"mt-32"}>
       <Wrapper id="pricing">
         <HeadTextWrapper>
-          <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight">
-            <span>Ready to</span>{" "}
-            <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-primary to-purple-500 lg:inline">
-              Get Started?{" "}
-            </span>
-          </h1>
-          <p className="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
-            Choose a plan that suits your business needs
-          </p>
+          <Heading
+            FrontHeadText="Ready to"
+            spanText="Get Started?"
+            descText="Choose a plan that suits your business needs"
+          />
         </HeadTextWrapper>
         <div className=" flex justify-around gap-4 lg:gap-0 flex-col sm:flex-row">
           <PricingCard

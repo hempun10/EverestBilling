@@ -1,6 +1,9 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion";
 
 interface Props {
   textContainerClassName: string;
@@ -21,7 +24,8 @@ const FeatureCard = ({
 }: Props) => {
   return (
     <section className=" mt-12 flex gap-[4rem] items-center flex-col sm:flex-row ">
-      <div
+      <motion.div
+        variants={fadeIn("right", "tween", 0.2, 1)}
         className={cn(
           "text_content  sm:w-1/2 text-right",
           textContainerClassName
@@ -40,8 +44,9 @@ const FeatureCard = ({
           {" "}
           {desc}
         </p>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", "tween", 0.2, 1)}
         className={cn("w-full text-center md:w-1/2  ", imgContainerClassName)}
       >
         <div className="relative z-0 w-full mt-8">
@@ -63,7 +68,7 @@ const FeatureCard = ({
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

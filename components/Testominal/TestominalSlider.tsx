@@ -7,10 +7,12 @@ import { Pagination } from "swiper/modules";
 // Css
 import "./slider.css";
 import { TestominalCard } from "./TestominalCard";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion";
 
 const TestominalSlider = () => {
   return (
-    <>
+    <motion.div variants={fadeIn("up", "tween", 1, 1)}>
       <Swiper
         spaceBetween={30}
         breakpoints={{
@@ -45,7 +47,7 @@ const TestominalSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </motion.div>
   );
 };
 

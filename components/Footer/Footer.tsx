@@ -1,17 +1,23 @@
-// MainFooter.tsx
-
+"use client";
 import React from "react";
 import FooterSection from "./FooterSection";
 import FooterContact from "./FooterContact";
 import { usefulLinks, contactLinks } from "@/constants/constants";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { footerVariants } from "@/lib/motion";
 
 const MainFooter = () => {
   const data = new Date();
   let year = data.getFullYear();
   return (
-    <footer className="bg-white text-center text-neutral-600 lg:text-left">
+    <motion.footer
+      className="bg-white text-center text-neutral-600 lg:text-left"
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="show"
+    >
       <div className="mx-6 py-10 text-left">
         <div className=" flex  gap-8 flex-col sm:flex-row justify-center">
           <FooterSection>
@@ -68,7 +74,7 @@ const MainFooter = () => {
           Everest Billing System
         </a>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

@@ -1,6 +1,10 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/motion";
+import { TypingText } from "./TypingText";
 
 interface Props {
   headText?: string;
@@ -9,6 +13,8 @@ interface Props {
   className?: string;
   BtnClassName?: string;
   subHeadClassName?: string;
+  index: number;
+  isHighlightFeature?: boolean;
 }
 const Feature = ({
   headText,
@@ -17,9 +23,12 @@ const Feature = ({
   className,
   BtnClassName,
   subHeadClassName,
+  index,
+  isHighlightFeature = false,
 }: Props) => {
   return (
-    <li
+    <motion.li
+      variants={fadeIn("up", "sween", index * 0.8, 1, isHighlightFeature)}
       className={cn(
         " flex  text-left gap-3  max-h-[50px] cursor-pointer ",
         className
@@ -44,7 +53,7 @@ const Feature = ({
           {subHeading}
         </p>
       </div>
-    </li>
+    </motion.li>
   );
 };
 
