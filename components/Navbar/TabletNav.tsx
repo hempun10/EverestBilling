@@ -9,7 +9,7 @@ export function TabletNav() {
       <SheetTrigger asChild>
         <Button variant="outline">Menu</Button>
       </SheetTrigger>
-      <SheetContent className=" flex flex-col justify-between">
+      <SheetContent className=" flex flex-col justify-around">
         <MainNav />
         <NavActions />
       </SheetContent>
