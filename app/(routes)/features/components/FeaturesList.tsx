@@ -3,10 +3,15 @@ import FeatureCard from "@/components/shared/FeatureCard";
 import React from "react";
 import { featureData } from "@/constants/constants";
 import Heading from "@/components/shared/Heading";
-
+import { motion } from "framer-motion";
 const FeaturesList = () => {
   return (
-    <div className="mt-32">
+    <motion.div
+      className="mt-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.1 }}
+    >
       <Heading FrontHeadText="Key" spanText="Features" descText="" />
       {featureData.map((feature, index) => (
         <FeatureCard
@@ -19,7 +24,7 @@ const FeaturesList = () => {
           imgContainerClassName={feature.imgContainerClassName}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

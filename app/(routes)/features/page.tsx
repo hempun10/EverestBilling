@@ -8,10 +8,9 @@ import React from "react";
 import FeaturesList from "./components/FeaturesList";
 
 const FeaturesPage = () => {
-  // More than just accounting
   return (
     <>
-      <Container className={"mt-32"}>
+      <Container className={"mt-32 px-24"}>
         <Wrapper>
           <HeadTextWrapper>
             <Heading
@@ -28,9 +27,8 @@ const FeaturesPage = () => {
               />
             </div>
           </HeadTextWrapper>
-          <FeaturesList />
         </Wrapper>
-        {/* <Features /> */}
+        <FeaturesList />
       </Container>
       <CTA />
     </>
