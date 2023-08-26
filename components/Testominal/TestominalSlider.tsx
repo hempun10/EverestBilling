@@ -3,7 +3,7 @@ import React from "react";
 import { TestominalData } from "@/constants/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 // Css
 import "./slider.css";
 import { TestominalCard } from "./TestominalCard";
@@ -29,10 +29,14 @@ const TestominalSlider = () => {
             spaceBetween: 50,
           },
         }}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper max-w-9/12  overflow-hidden cursor-grabbing rounded-lg"
       >
         {TestominalData.map((item, i) => (

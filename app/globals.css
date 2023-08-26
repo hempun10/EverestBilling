@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.backdrop {
-  @apply bg-primary/70 absolute h-[100%] w-[100%] -z-10;
-}
 .path_test {
   clip-path: polygon(
     0% 0%,
