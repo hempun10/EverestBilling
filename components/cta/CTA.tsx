@@ -26,7 +26,7 @@ const CTA = () => {
           </div>
           <motion.div
             className="img_container relative w-full  lg:w-1/2 aspect-video "
-            variants={fadeIn("up", "tween", 1, 1)}
+            variants={fadeIn("up", "tween", 0.5, 0.5)}
           >
             <Image
               src={"/assets/cta.png"}

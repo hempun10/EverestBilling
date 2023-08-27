@@ -11,7 +11,7 @@ const Features = () => {
     <div className=" flex flex-col justify-center items-center md:flex-row gap-4 ">
       <motion.div
         className="img_conatiner  relative w-11/12 sm:w-1/2 shadow-2xl rounded-lg overflow-hidden "
-        variants={slideIn("left", "stagger", 1.2, 1)}
+        variants={slideIn("left", "stagger", 0.5, 0.7)}
       >
         <Image
           src={"/assets/benefit.png"}

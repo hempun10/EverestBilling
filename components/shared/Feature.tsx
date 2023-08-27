@@ -28,7 +28,7 @@ const Feature = ({
 }: Props) => {
   return (
     <motion.li
-      variants={fadeIn("up", "sween", index * 0.8, 1, isHighlightFeature)}
+      variants={fadeIn("up", "sween", index * 0.2, 0.5, isHighlightFeature)}
       className={cn(
         " flex  text-left gap-3  max-h-[50px] cursor-pointer ",
         className

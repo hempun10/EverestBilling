@@ -13,7 +13,7 @@ interface Props {
 }
 const CustomBtn = ({ content, className, link }: Props) => {
   return (
-    <motion.div className=" inline" variants={textVariant(1.4)}>
+    <motion.div className=" inline" variants={textVariant(1)}>
       <Button
         asChild
         className={cn(

@@ -32,7 +32,7 @@ const Heading = ({
         <TypingText title={TopSubHeadText} className={TopSubHeadClassName} />
       )}
       <motion.h1
-        variants={textVariant(1.1)}
+        variants={textVariant(0.5)}
         className={cn(
           "mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-900 md:text-6xl md:tracking-tight",
           headClassName
@@ -50,7 +50,7 @@ const Heading = ({
         <span>{LastHeadText}</span>
       </motion.h1>
       <motion.p
-        variants={textVariant(1.2)}
+        variants={textVariant(0.7)}
         className={cn(
           "px-0 mb-8 text-lg text-gray-600 md:text-lg lg:px-24",
           descClassName

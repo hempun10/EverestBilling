@@ -12,7 +12,7 @@ const BrowseTabImg = ({ imgUrl }: Props) => {
   return (
     <motion.div
       className="relative z-0 w-full "
-      variants={slideIn("right", "tween", 1, 1)}
+      variants={slideIn("right", "tween", 0.5, 0.7)}
     >
       <div className="relative overflow-hidden shadow-2xl lg:w-[800px] m-auto">
         <div className="flex items-center flex-none px-4 bg-primary rounded-b-none h-11 rounded-xl">

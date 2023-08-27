@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Inter, Maven_Pro } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
