@@ -6,6 +6,7 @@ import NavActions from "./NavActions";
 import { TabletNav } from "./TabletNav";
 import { motion } from "framer-motion";
 import { navVariants } from "@/lib/motion";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -18,13 +19,15 @@ const Navbar = () => {
       }
     >
       <div className="logo ">
-        <Image
-          src={"/assets/logo.png"}
-          alt="logo"
-          width={70}
-          height={70}
-          priority
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/assets/logo.png"}
+            alt="logo"
+            width={70}
+            height={70}
+            priority
+          />
+        </Link>
       </div>
       <div className="hidden lg:block">
         <MainNav />
